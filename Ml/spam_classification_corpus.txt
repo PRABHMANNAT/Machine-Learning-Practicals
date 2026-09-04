@@ -1,0 +1,300 @@
+ham	Ticket booked for Monday.
+ham	Back in 10 mins.
+ham	Is the dog fed?
+ham	Check email subject ‘notes_v2’
+ham	We’ll finalize it on Friday.
+ham	Happy birthday! 🎂 Have a great day.
+spam	Get rich with crypto signals. Join https://offerz.today/app
+ham	Snacks in the pantry.
+spam	FREE Netflix for 1 months! Register at http://short.is/gift
+spam	Limited seats: Data Science course @ ₹1499. Enroll http://short.is/gift
+ham	Project repo updated.
+spam	Netflix annual at ₹1999. Limited offer https://offerz.today/app
+spam	Pay electricity bill & get ₹10000 cashback. https://offerz.today/app
+spam	Your device is infected! Clean now https://offerz.today/app
+ham	Check email subject ‘alpha_beta’
+ham	All good. Thanks!
+spam	Loan sanctioned: Doc pickup today. Confirm 1800-890-1234
+ham	Call the plumber.
+spam	UPI lite bonus ₹2999. Activate http://rewards-now.co/claim
+ham	Start without me.
+ham	Can you print 2 copies?
+ham	New Wi‑Fi password is spring2025.
+ham	Alarm set for 12:00.
+spam	You’ve been selected for a FREE gift voucher worth ₹2999. Call 011-4000-2211.
+spam	Lucky spin unlocked! http://bit.ly/xf12
+spam	Luxury watch at 60% OFF! http://short.is/gift
+ham	Meeting moved to 12:00.
+spam	Electricity subsidy claim ₹2999. https://offerz.today/app
+ham	Call the cab at 13:15.
+ham	Nice work on the doc.
+spam	Spin the wheel & win prizes! http://dealz.in/mega
+spam	FINAL notice! Parcel waiting. Pay customs at http://short.is/gift
+ham	Don’t worry, we’ll fix it tomorrow.
+ham	Same issue again, will check.
+ham	Don’t forget to water the plants.
+spam	Trading masterclass FREE today 9:00 at https://go.shop/flash
+ham	Lunch break at 9:00.
+ham	Path is /home/user/projX
+ham	Don’t forget to water the plants.
+ham	Game night at 9:00?
+spam	Pre‑placement course at ₹50000. Enroll https://bank-safe.link/verify
+spam	Parcel arriving. Pay small fee at http://short.is/gift to release.
+ham	Snacks in the pantry.
+spam	Boost your followers fast! Visit http://bit.ly/xf12
+spam	Invest ₹25000 get ₹50000 in 12 months. http://bit.ly/xf12
+spam	HURRY! Flash sale ends 9:00. Shop http://bit.ly/xf12
+ham	Please resend the link.
+spam	Flipkart jackpot! Use code TRYNOW at https://tiny.one/iphone
+spam	Mega Jackpot tonight! Buy tickets https://go.shop/flash
+spam	FREE trial ends today 13:15. Continue at http://bit.ly/xf12
+ham	Booked table for 13:15.
+ham	Let’s watch the match tonight?
+spam	Refer & earn ₹2999/friend. Start https://go.shop/flash
+ham	Room cleaned.
+ham	Bring the keys.
+spam	FREE antivirus for 1 months. Get https://go.shop/flash
+ham	Your OTP for login is 975467. Don’t share.
+spam	Verify your address to avoid service stoppage http://rewards-now.co/claim
+spam	Loan sanctioned: Doc pickup today. Confirm 1800-102-0001
+ham	Please resend the link.
+ham	Game night at 18:45?
+ham	Dinner at my place?
+spam	Invest ₹1999 get ₹3998 in 12 months. http://rewards-now.co/claim
+spam	You won! Claim prize code HELLO10 at https://tiny.one/iphone
+spam	Your UPI will be blocked. Update PIN at https://bank-safe.link/verify
+ham	Meeting notes are in the drive.
+spam	Pre‑approved GOLD card. Apply http://short.is/gift
+spam	Beauty products at 50% OFF. Shop http://bit.ly/xf12
+spam	WIN a brand new iPhone 15! Click http://rewards-now.co/claim now. T&C apply.
+ham	Call grandma today.
+spam	Bank refund pending ₹200000. Confirm http://short.is/gift
+spam	Pay electricity bill & get ₹50000 cashback. https://bank-safe.link/verify
+spam	Congrats! Shortlisted for a Dubai trip. Pay booking fee at https://tiny.one/iphone.
+ham	Snacks in the pantry.
+spam	UPI lite bonus ₹1999. Activate https://bank-safe.link/verify
+ham	Is the dog fed?
+spam	Double your money in 30 days. Join https://bank-safe.link/verify
+spam	FREE DEMO class today at 9:00. Join https://tiny.one/iphone
+ham	Please approve the PR.
+ham	Send me the address.
+ham	Leaving office now.
+ham	Remind me at 13:15.
+ham	Can you share that PDF?
+ham	Nice work on the doc.
+spam	HURRY! Flash sale ends 10:30. Shop http://bit.ly/xf12
+ham	Nice work on the doc.
+spam	Lucky spin unlocked! http://bit.ly/xf12
+ham	Bring the keys.
+ham	Meeting moved to 12:00.
+ham	Dinner at my place?
+ham	Congrats on the results!
+spam	Exclusive IPO tips. Join http://dealz.in/mega
+ham	Train number is 12952.
+spam	Luxury watch at 60% OFF! https://tiny.one/iphone
+spam	Luxury watch at 40% OFF! http://short.is/gift
+spam	Pre‑approved personal loan @ 1.49% p.a. Apply http://bit.ly/xf12
+ham	Project presentation on Friday.
+spam	Your loan of ₹50000 is pre‑approved. Reply YES to apply.
+spam	iPhone @ ₹999 only for first 100! https://go.shop/flash
+ham	Let’s watch the match tonight?
+ham	Results come out on Sunday.
+ham	Meeting room A-101.
+spam	Bank refund pending ₹999. Confirm http://short.is/gift
+spam	Job alert: Work from home ₹2999/mo. http://short.is/gift
+ham	Bring your laptop.
+ham	Let’s gym tomorrow morning?
+ham	Leave at 9:00, traffic is bad.
+spam	Claim your reward points now: visit http://rewards-now.co/claim
+ham	Meeting moved to 18:45.
+ham	Wearing formals tomorrow.
+spam	Limited seats: Data Science course @ ₹50000. Enroll http://short.is/gift
+spam	Mega Jackpot tonight! Buy tickets http://rewards-now.co/claim
+ham	Call the cab at 13:15.
+spam	Free premium wallpaper pack! https://go.shop/flash
+spam	Parcel arriving. Pay small fee at http://dealz.in/mega to release.
+spam	Your SIM will be deactivated. Update KYC https://bank-safe.link/verify
+ham	Same issue again, will check.
+spam	You’ve been selected for a FREE gift voucher worth ₹10000. Call 0928-445-1180.
+ham	New Wi‑Fi password is projX.
+ham	Meet near gate Conf‑1.
+spam	FREE insurance cover worth ₹10000. Activate at http://rewards-now.co/claim
+spam	Missed delivery: reschedule at https://go.shop/flash
+spam	Congrats! Shortlisted for a Dubai trip. Pay booking fee at http://bit.ly/xf12.
+spam	URGENT: Account suspended. Verify at https://offerz.today/app
+ham	Text me when free.
+ham	Close the windows please.
+spam	Lucky draw winner! Call 0928-445-1180
+spam	Your KYC is pending. Complete now at https://offerz.today/app to avoid blockage.
+spam	Flipkart jackpot! Use code STAR50 at http://rewards-now.co/claim
+ham	Room cleaned.
+ham	LOL that meme was epic 😂
+spam	Hot singles near you 😏 http://rewards-now.co/claim
+spam	Recharge & get 2GB FREE. Use code TRYNOW. Download app http://rewards-now.co/claim
+ham	Exam postponed to Wednesday.
+spam	Your UPI will be blocked. Update PIN at http://dealz.in/mega
+ham	Library closes at 13:15.
+spam	Mega Jackpot tonight! Buy tickets https://bank-safe.link/verify
+ham	Meeting finished early.
+spam	Netflix annual at ₹499. Limited offer http://rewards-now.co/claim
+spam	Double data offer! Recharge now http://short.is/gift
+spam	Claim your reward points now: visit https://offerz.today/app
+spam	Pre‑approved GOLD card. Apply http://rewards-now.co/claim
+ham	Lunch break at 13:15.
+ham	Send me the address.
+ham	Close the windows please.
+spam	Recharge & get 10GB FREE. Use code WINBIG. Download app https://bank-safe.link/verify
+spam	Loan sanctioned: Doc pickup today. Confirm 1800-102-0001
+spam	Pay electricity bill & get ₹799 cashback. https://offerz.today/app
+spam	Upgrade to PRO at 70% OFF. https://offerz.today/app
+ham	Game night at 15:00?
+ham	Remind me at 13:15.
+ham	Booked table for 15:00.
+ham	Leaving office now.
+ham	I’ll pick you up at 10:30.
+ham	Same issue again, will check.
+spam	Double your money in 30 days. Join https://offerz.today/app
+spam	Spin the wheel & win prizes! https://tiny.one/iphone
+ham	I need a nap.
+ham	Leave at 18:45, traffic is bad.
+spam	Flipkart jackpot! Use code WINBIG at https://go.shop/flash
+ham	Happy birthday! 🎂 Have a great day.
+ham	Library closes at 20:00.
+ham	Don’t forget your ID card.
+ham	Join Zoom at 12:00.
+spam	Your courier is stuck at customs. Pay ₹2999 at http://rewards-now.co/claim
+spam	Boost your followers fast! Visit https://tiny.one/iphone
+spam	Flipkart jackpot! Use code FREE5 at https://bank-safe.link/verify
+ham	Project repo updated.
+ham	Lunch break at 10:30.
+spam	Bank refund pending ₹25000. Confirm http://short.is/gift
+ham	Meet near gate G‑12.
+ham	Train delayed by 15 mins.
+spam	HDFC Alert: Unusual login. Secure account https://tiny.one/iphone
+spam	Exclusive gym membership 90% OFF. Join http://dealz.in/mega
+spam	Free premium wallpaper pack! https://go.shop/flash
+spam	FREE antivirus for 1 months. Get http://bit.ly/xf12
+ham	Leave at 13:15, traffic is bad.
+spam	Mobile bill waived! Verify http://dealz.in/mega
+ham	Meeting moved to 15:00.
+ham	Congrats on the results!
+ham	See you in 30 mins.
+spam	New investment plan @ 1.25% monthly. Details https://bank-safe.link/verify
+spam	FREE insurance cover worth ₹2999. Activate at https://offerz.today/app
+spam	Exclusive IPO tips. Join https://tiny.one/iphone
+spam	Exclusive gym membership 70% OFF. Join http://dealz.in/mega
+spam	Parcel arriving. Pay small fee at http://dealz.in/mega to release.
+spam	Recharge & get 10GB FREE. Use code HELLO10. Download app https://bank-safe.link/verify
+ham	Got the files, thanks.
+ham	Gate changed to Lab-2.
+spam	Exclusive SALE: 70% OFF on shoes. Shop at https://offerz.today/app. Limited time!
+spam	Congrats! Shortlisted for a Dubai trip. Pay booking fee at https://offerz.today/app.
+ham	Reached home safely.
+ham	Meeting room A-101.
+ham	Let’s leave by 12:00.
+spam	Electricity subsidy claim ₹999. http://bit.ly/xf12
+ham	Reached home safely.
+spam	Get rich with crypto signals. Join https://go.shop/flash
+ham	Don’t worry, we’ll fix it tomorrow.
+spam	Pre‑approved personal loan @ 0.99% p.a. Apply https://go.shop/flash
+spam	Limited seats: Data Science course @ ₹5000. Enroll http://dealz.in/mega
+ham	See you in 5 mins.
+spam	Parcel arriving. Pay small fee at https://tiny.one/iphone to release.
+ham	Let’s gym tomorrow morning?
+spam	FREE antivirus for 2 months. Get https://tiny.one/iphone
+spam	Hot deal: flight tickets from ₹50000. Book http://short.is/gift
+spam	Limited stock! Order now http://short.is/gift
+spam	Gold loan at low rate 1.99%. Apply http://rewards-now.co/claim
+ham	Can you review my code?
+ham	I need a nap.
+ham	I need a nap.
+ham	LOL that meme was epic 😂
+ham	Room cleaned.
+ham	LOL that meme was epic 😂
+ham	Train delayed by 60 mins.
+spam	HURRY! Flash sale ends 15:00. Shop https://offerz.today/app
+spam	Amazon reward ₹50000. Verify at http://dealz.in/mega
+spam	Hot deal: flight tickets from ₹1499. Book http://short.is/gift
+spam	Parcel arriving. Pay small fee at http://short.is/gift to release.
+spam	Pre‑placement course at ₹200000. Enroll http://rewards-now.co/claim
+ham	Project presentation on Tuesday.
+spam	Recover deleted photos instantly! Download http://bit.ly/xf12
+ham	Project presentation on Saturday.
+spam	Netflix annual at ₹25000. Limited offer http://short.is/gift
+ham	Happy birthday! 🎂 Have a great day.
+ham	I’ll text you the route.
+ham	Don’t forget the charger.
+ham	Train delayed by 20 mins.
+spam	Loan sanctioned: Doc pickup today. Confirm 1800-102-0001
+spam	Luxury watch at 90% OFF! http://rewards-now.co/claim
+spam	Your SIM will be deactivated. Update KYC https://tiny.one/iphone
+spam	Pre‑approved personal loan @ 0.99% p.a. Apply https://offerz.today/app
+ham	New Wi‑Fi password is alpha_beta.
+spam	Pay electricity bill & get ₹25000 cashback. https://tiny.one/iphone
+spam	Crypto airdrop! Claim now https://bank-safe.link/verify
+ham	Bring your laptop.
+ham	Call the plumber.
+ham	Reached home safely.
+ham	LOL that meme was epic 😂
+ham	Send photos from the trip.
+spam	Mega Jackpot tonight! Buy tickets https://tiny.one/iphone
+spam	You’ve won a voucher! Code FREE5 at http://bit.ly/xf12
+ham	FYI deadline is Sunday.
+ham	Leaving office now.
+ham	Please bring the notes to class.
+spam	Free gift inside! Open https://go.shop/flash
+ham	Your parcel arrived.
+ham	Wearing formals tomorrow.
+spam	Axis Rewards: redeem ₹499 at http://dealz.in/mega
+ham	Let’s leave by 13:15.
+ham	Train number is 12952.
+ham	Game night at 15:00?
+spam	Mobile bill waived! Verify https://go.shop/flash
+ham	Bring the keys.
+spam	You’re a lucky winner! Call 1800-102-0001 now.
+ham	Your OTP for login is 612262. Don’t share.
+spam	Credit card approved with limit ₹799. Apply now https://tiny.one/iphone
+ham	Call grandma today.
+spam	Boost your followers fast! Visit https://go.shop/flash
+spam	GST overdue. Clear dues at https://bank-safe.link/verify
+ham	Meeting finished early.
+spam	Download statement at https://go.shop/flash
+spam	Gold loan at low rate 1.49%. Apply https://go.shop/flash
+spam	Loan sanctioned: Doc pickup today. Confirm 0928-445-1180
+ham	I cooked extra. Come over!
+spam	Proof of address missing. Submit http://short.is/gift
+ham	Congrats on the results!
+spam	Unlock blue tick on Instagram. Apply http://rewards-now.co/claim
+spam	Parcel arriving. Pay small fee at https://tiny.one/iphone to release.
+ham	Meeting moved to 18:45.
+spam	GST overdue. Clear dues at http://dealz.in/mega
+ham	Let’s do a quick call at 13:15.
+ham	Call the plumber.
+spam	Your device is infected! Clean now http://short.is/gift
+spam	Win PS5 today! Enter http://dealz.in/mega
+spam	Netflix annual at ₹25000. Limited offer http://dealz.in/mega
+ham	Reached the venue.
+ham	See you in 60 mins.
+spam	URGENT: Account suspended. Verify at https://go.shop/flash
+ham	Don’t forget the charger.
+spam	FINAL notice! Parcel waiting. Pay customs at http://dealz.in/mega
+spam	Trading masterclass FREE today 13:15 at https://go.shop/flash
+ham	Mom’s phone is off, try later.
+ham	Is the dog fed?
+ham	Turn on DND for the exam.
+spam	VIP pass to concert! Register http://short.is/gift
+spam	SBI KYC update required IMMEDIATELY. http://short.is/gift
+spam	Your PAN will be blocked. Update now https://tiny.one/iphone
+spam	Hot singles near you 😏 https://go.shop/flash
+ham	Meeting room Lab-2.
+ham	Dinner at my place?
+ham	Bring your laptop.
+spam	Medical policy APPROVED. Pay ₹5000 at https://offerz.today/app
+spam	Axis Rewards: redeem ₹10000 at http://bit.ly/xf12
+spam	Win PS5 today! Enter http://bit.ly/xf12
+spam	Get rich with crypto signals. Join http://rewards-now.co/claim
+spam	HDFC Alert: Unusual login. Secure account https://tiny.one/iphone
+spam	Proof of address missing. Submit https://go.shop/flash
+ham	Take an umbrella, looks like rain.
+spam	Exclusive SALE: 90% OFF on shoes. Shop at https://tiny.one/iphone. Limited time!
+ham	Start without me.
