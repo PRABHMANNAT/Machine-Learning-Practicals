@@ -1,0 +1,12 @@
+"""JSON routes grouped separately from page routes."""
+
+from flask import Blueprint, jsonify
+
+
+api = Blueprint("api", __name__)
+
+
+@api.get("/health")
+def health():
+    return jsonify({"status": "ok"})
+

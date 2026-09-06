@@ -1,89 +1,82 @@
-### Building Url Dynamically
-## Variable Rule
-### Jinja 2 Template Engine
+"""Demo 4: dynamic routes, Jinja2, forms, redirects, and url_for().
 
-### Jinja2 Template Engine
-'''
-{{  }} expressions to print output in html
-{%...%} conditions, for loops
-{#...#} this is for comments
-'''
+Jinja syntax:
+    {{ expression }}   print an escaped value
+    {% statement %}    if/for/include/block instructions
+    {# comment #}      template-only comment
+"""
 
-from flask import Flask,render_template,request,redirect,url_for
-'''
- It creates an instance of the Flask class, 
- which will be your WSGI (Web Server Gateway Interface) application.
-'''
-###WSGI Application
-app=Flask(__name__)
+from flask import Flask, redirect, render_template, request, url_for
 
-@app.route("/")
+
+app = Flask(__name__)
+
+
+@app.get("/")
 def welcome():
-    return "<html><H1>Welcome to the flask course</H1></html>"
+    return "<h1>Welcome to the Flask course</h1>"
 
-@app.route("/index",methods=['GET'])
+
+@app.get("/index")
 def index():
-    return render_template('index.html')
+    return render_template("index.html", page_title="Jinja home")
 
-@app.route('/about')
+
+@app.get("/about")
 def about():
-    return render_template('about.html')
+    return render_template("about.html", page_title="About")
 
 
+@app.get("/success/<int:score>")
+def success(score: int):
+    result = "PASSED" if score >= 50 else "FAILED"
+    return render_template("result.html", results=score, label=result)
 
-## Variable Rule
-@app.route('/success/<int:score>')
-def success(score):
-    res=""
-    if score>=50:
-        res="PASSED"
-    else:
-        res="FAILED"
 
-    return render_template('result.html',results=res)
+@app.get("/successres/<float:score>")
+def successres(score: float):
+    result = "PASSED" if score >= 50 else "FAILED"
+    details = {"score": round(score, 2), "result": result}
+    return render_template("result1.html", results=details)
 
-## Variable Rule
-@app.route('/successres/<int:score>')
-def successres(score):
-    res=""
-    if score>=50:
-        res="PASSED"
-    else:
-        res="FAILED"
-    
-    exp={'score':score,"res":res}
 
-    return render_template('result1.html',results=exp)
+# Keep the original misspelled route for compatibility with old lesson links.
+@app.get("/sucessif/<int:score>")
+def successif(score: int):
+    return render_template("result.html", results=score)
 
-## if confition
-@app.route('/sucessif/<int:score>')
-def successif(score):
 
-    return render_template('result.html',results=score)
+@app.get("/fail/<int:score>")
+def fail(score: int):
+    return render_template("result.html", results=score)
 
-@app.route('/fail/<int:score>')
-def fail(score):
-    return render_template('result.html',results=score)
 
-@app.route('/submit',methods=['POST','GET'])
+@app.route("/submit", methods=["GET", "POST"])
 def submit():
-    total_score=0
-    if request.method=='POST':
-        science=float(request.form['science'])
-        maths=float(request.form['maths'])
-        c=float(request.form['c'])
-        data_science=float(request.form['datascience'])
+    if request.method == "GET":
+        return render_template("getresult.html", page_title="Score calculator")
 
-        total_score=(science+maths+c+data_science)/4
-    else:
-        return render_template('getresult.html')
-    return redirect(url_for('successres',score=total_score))
-            
-        
+    field_names = ["science", "maths", "c", "datascience"]
+    try:
+        scores = [float(request.form.get(field, "")) for field in field_names]
+    except ValueError:
+        return render_template(
+            "getresult.html",
+            page_title="Score calculator",
+            error="Every score must be a number.",
+        ), 400
+
+    if any(score < 0 or score > 100 for score in scores):
+        return render_template(
+            "getresult.html",
+            page_title="Score calculator",
+            error="Scores must be between 0 and 100.",
+        ), 400
+
+    average = sum(scores) / len(scores)
+    return redirect(url_for("successres", score=average))
 
 
-
-
-if __name__=="__main__":
+if __name__ == "__main__":
     app.run(debug=True)
 

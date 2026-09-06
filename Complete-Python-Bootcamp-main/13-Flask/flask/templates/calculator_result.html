@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Calculator Result</h1>
+  <p class="result">{{ values.left }} {{ values.symbol }} {{ values.right }} = {{ values.result }}</p>
+  <a href="{{ url_for('calculator') }}">Try another</a>
+{% endblock %}
+

@@ -1,68 +1,102 @@
-### Put and Delete-HTTP Verbs
-### Working With API's--Json
+"""Demo 5: an in-memory REST-style CRUD JSON API.
 
-from flask import Flask, jsonify, request
+Try with curl while this file is running:
+    curl http://127.0.0.1:5000/items
+    curl -X POST http://127.0.0.1:5000/items -H "Content-Type: application/json" \
+         -d "{\"name\":\"Read\",\"description\":\"Read Flask notes\"}"
+
+The list resets whenever the process restarts. See demos/database_crud.py for
+persistent SQLite storage.
+"""
+
+from flask import Flask, jsonify, request, url_for
+
 
 app = Flask(__name__)
 
-##Initial Data in my to do list
-items = [
+INITIAL_ITEMS = [
     {"id": 1, "name": "Item 1", "description": "This is item 1"},
-    {"id": 2, "name": "Item 2", "description": "This is item 2"}
+    {"id": 2, "name": "Item 2", "description": "This is item 2"},
 ]
+items = [item.copy() for item in INITIAL_ITEMS]
 
-@app.route('/')
+
+def find_item(item_id: int):
+    return next((item for item in items if item["id"] == item_id), None)
+
+
+def json_error(message: str, status: int):
+    return jsonify({"error": message, "status": status}), status
+
+
+@app.get("/")
 def home():
-    return "Welcome To The Sample To DO List App"
+    return jsonify({"message": "Welcome to the sample to-do API", "items": url_for("get_items")})
 
-## Get: Retrieve all the items
 
-@app.route('/items',methods=['GET'])
+@app.get("/items")
 def get_items():
-    return jsonify(items)
+    return jsonify({"items": items, "count": len(items)})
 
-## get: Retireve a specific item by Id
-@app.route('/items/<int:item_id>',methods=['GET'])
-def get_item(item_id):
-    item=next((item for item in items if item["id"]==item_id),None)
+
+@app.get("/items/<int:item_id>")
+def get_item(item_id: int):
+    item = find_item(item_id)
     if item is None:
-        return jsonify({"error":"item not found"})
+        return json_error("Item not found", 404)
     return jsonify(item)
 
-## Post :create a new task- API
-@app.route('/items',methods=['POST'])
+
+@app.post("/items")
 def create_item():
-    if not request.json or not 'name' in request.json:
-        return jsonify({"error":"item not found"})
-    new_item={
-        "id": items[-1]["id"] + 1 if items else 1,
-        "name":request.json['name'],
-        "description":request.json["description"]
+    data = request.get_json(silent=True)
+    if not isinstance(data, dict):
+        return json_error("Send a JSON object with Content-Type application/json", 415)
+    name = str(data.get("name", "")).strip()
+    description = str(data.get("description", "")).strip()
+    if not name:
+        return json_error("'name' is required", 400)
 
-
+    new_item = {
+        "id": max((item["id"] for item in items), default=0) + 1,
+        "name": name,
+        "description": description,
     }
     items.append(new_item)
-    return jsonify(new_item)
+    response = jsonify(new_item)
+    response.status_code = 201
+    response.headers["Location"] = url_for("get_item", item_id=new_item["id"])
+    return response
 
-# Put: Update an existing item
-@app.route('/items/<int:item_id>',methods=['PUT'])
-def update_item(item_id):
-    item = next((item for item in items if item["id"] == item_id), None)
+
+@app.put("/items/<int:item_id>")
+def update_item(item_id: int):
+    item = find_item(item_id)
     if item is None:
-        return jsonify({"error": "Item not found"})
-    item['name'] = request.json.get('name', item['name'])
-    item['description'] = request.json.get('description', item['description'])
+        return json_error("Item not found", 404)
+    data = request.get_json(silent=True)
+    if not isinstance(data, dict):
+        return json_error("A JSON object is required", 415)
+    if "name" in data and not str(data["name"]).strip():
+        return json_error("'name' cannot be empty", 400)
+    item["name"] = str(data.get("name", item["name"])).strip()
+    item["description"] = str(data.get("description", item["description"])).strip()
     return jsonify(item)
 
-# DELETE: Delete an item
-@app.route('/items/<int:item_id>', methods=['DELETE'])
-def delete_item(item_id):
-    global items
-    items = [item for item in items if item["id"] != item_id]
-    return jsonify({"result": "Item deleted"})
+
+@app.delete("/items/<int:item_id>")
+def delete_item(item_id: int):
+    item = find_item(item_id)
+    if item is None:
+        return json_error("Item not found", 404)
+    items.remove(item)
+    return "", 204
 
 
+@app.errorhandler(404)
+def api_not_found(error):
+    return json_error("Endpoint not found", 404)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)

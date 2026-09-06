@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Welcome, {{ username }}</h1>
+  <p>This route is protected by a small <code>login_required</code> decorator.</p>
+  <form action="{{ url_for('logout') }}" method="post"><button type="submit">Log out</button></form>
+{% endblock %}
+

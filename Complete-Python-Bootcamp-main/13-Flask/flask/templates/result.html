@@ -1,11 +1,9 @@
-<h1>
-
-  Based on the marks You have  {{ results }}
-
-  {% if results>=50 %}
-  <h1>You have passed with marks {{results}}</h1>
-  {% else %}
-  <h2>You have failed with marks {{results}} </h2>
-  {% endif %}
-
-</h1>
+{% extends "base.html" %}
+{% block content %}
+  <h1>Final Result</h1>
+  {% set passed = results >= 50 %}
+  <p class="result {{ 'passed' if passed else 'failed' }}">
+    You {{ 'passed' if passed else 'failed' }} with {{ results }} marks.
+  </p>
+  {% if label %}<p>Label from Python: {{ label }}</p>{% endif %}
+{% endblock %}

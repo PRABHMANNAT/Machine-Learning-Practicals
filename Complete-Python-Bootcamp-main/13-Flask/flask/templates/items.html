@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>SQLite Task CRUD</h1>
+  <p><a href="{{ url_for('create') }}">Create a task</a></p>
+  {% if tasks %}
+    {% for task in tasks %}
+      <article class="card">
+        <strong>{{ task.title }}</strong>
+        <span>{{ 'Done' if task.done else 'Not done' }}</span>
+        <a href="{{ url_for('edit', task_id=task.id) }}">Edit</a>
+        <form action="{{ url_for('delete', task_id=task.id) }}" method="post">
+          <button type="submit">Delete</button>
+        </form>
+      </article>
+    {% endfor %}
+  {% else %}<p>No tasks yet.</p>{% endif %}
+{% endblock %}
+

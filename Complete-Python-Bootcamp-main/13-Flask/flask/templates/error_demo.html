@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Responses and Errors</h1>
+  <ul>
+    <li><a href="{{ url_for('old_home') }}">Follow a redirect</a></li>
+    <li><a href="{{ url_for('set_theme', theme='dark') }}">Set a cookie</a></li>
+    <li><a href="/missing">See a custom 404</a></li>
+    <li><a href="{{ url_for('api_problem') }}">See a JSON error</a></li>
+  </ul>
+{% endblock %}
+

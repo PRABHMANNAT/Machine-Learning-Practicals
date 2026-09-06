@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Multi-page Flask Demo</h1>
+  <p>One Flask application can connect many URLs to many view functions.</p>
+  <ul>{% for feature in features %}<li>{{ feature }}</li>{% endfor %}</ul>
+  <p>Try <a href="/hello/Asha?language=Hindi">a dynamic greeting</a>.</p>
+{% endblock %}
+

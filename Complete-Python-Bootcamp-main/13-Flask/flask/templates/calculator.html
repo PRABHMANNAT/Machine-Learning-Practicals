@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Calculator Form</h1>
+  {% if error %}<p class="error" role="alert">{{ error }}</p>{% endif %}
+  <form method="post" class="card">
+    <label for="left">First number</label>
+    <input id="left" name="left" type="number" step="any" required>
+    <label for="operation">Operation</label>
+    <select id="operation" name="operation">
+      {% for name, details in operations.items() %}<option value="{{ name }}">{{ details[0] }}</option>{% endfor %}
+    </select>
+    <label for="right">Second number</label>
+    <input id="right" name="right" type="number" step="any" required>
+    <button type="submit">Calculate</button>
+  </form>
+{% endblock %}
+

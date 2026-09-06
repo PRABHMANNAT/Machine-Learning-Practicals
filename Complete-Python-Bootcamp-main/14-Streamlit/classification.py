@@ -1,32 +1,65 @@
-import streamlit as st
+"""Practical ML demo: Iris classification with cached data and model.
+
+Run:
+    streamlit run classification.py
+
+This model is a teaching example, not a real-world decision system.
+"""
+
 import pandas as pd
+import streamlit as st
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
 
+
+st.set_page_config(page_title="Iris Predictor", page_icon="🌸")
+
+
 @st.cache_data
 def load_data():
-    iris = load_iris()
-    df = pd.DataFrame(iris.data, columns=iris.feature_names)
-    df['species'] = iris.target
-    return df, iris.target_names
+    """Cache serializable data so reruns do not rebuild it unnecessarily."""
+    iris = load_iris(as_frame=True)
+    dataframe = iris.frame.rename(columns={"target": "species"})
+    return dataframe, list(iris.target_names), list(iris.feature_names)
 
-df,target_names=load_data()
 
-model=RandomForestClassifier()
-model.fit(df.iloc[:,:-1],df['species'])
+@st.cache_resource
+def train_model(dataframe, feature_names):
+    """Cache the model resource separately from cached data."""
+    model = RandomForestClassifier(n_estimators=150, random_state=42)
+    model.fit(dataframe[feature_names], dataframe["species"])
+    return model
 
-st.sidebar.title("Input Features")
-sepal_length = st.sidebar.slider("Sepal length", float(df['sepal length (cm)'].min()), float(df['sepal length (cm)'].max()))
-sepal_width = st.sidebar.slider("Sepal width", float(df['sepal width (cm)'].min()), float(df['sepal width (cm)'].max()))
-petal_length = st.sidebar.slider("Petal length", float(df['petal length (cm)'].min()), float(df['petal length (cm)'].max()))
-petal_width = st.sidebar.slider("Petal width", float(df['petal width (cm)'].min()), float(df['petal width (cm)'].max()))
 
-input_data = [[sepal_length, sepal_width, petal_length, petal_width]]
+dataframe, target_names, feature_names = load_data()
+model = train_model(dataframe, feature_names)
 
-## PRediction
-prediction = model.predict(input_data)
-predicted_species = target_names[prediction[0]]
+st.title("Iris Flower Prediction")
+st.write("Move the sliders, then ask the trained model for a prediction.")
 
-st.write("Prediction")
-st.write(f"The predicted species is: {predicted_species}")
+with st.sidebar:
+    st.header("Input features")
+    chosen_values = {}
+    for feature in feature_names:
+        chosen_values[feature] = st.slider(
+            feature.title(),
+            min_value=float(dataframe[feature].min()),
+            max_value=float(dataframe[feature].max()),
+            value=float(dataframe[feature].median()),
+            step=0.1,
+        )
 
+input_data = pd.DataFrame([chosen_values], columns=feature_names)
+prediction = int(model.predict(input_data)[0])
+probabilities = model.predict_proba(input_data)[0]
+predicted_species = target_names[prediction]
+
+st.subheader("Your input")
+st.dataframe(input_data, hide_index=True, width="stretch")
+st.metric("Predicted species", predicted_species.title())
+
+probability_data = pd.DataFrame(
+    {"species": [name.title() for name in target_names], "probability": probabilities}
+).set_index("species")
+st.bar_chart(probability_data)
+st.caption("A high model probability is confidence from this model—not a guarantee of truth.")

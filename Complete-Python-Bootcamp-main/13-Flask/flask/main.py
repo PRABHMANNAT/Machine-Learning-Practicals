@@ -1,23 +1,30 @@
-from flask import Flask,render_template
-'''
- It creates an instance of the Flask class, 
- which will be your WSGI (Web Server Gateway Interface) application.
-'''
-###WSGI Application
-app=Flask(__name__)
+"""Demo 2: render HTML templates for a small multi-page site."""
 
-@app.route("/")
+from flask import Flask, render_template
+
+
+app = Flask(__name__)
+
+
+@app.get("/")
 def welcome():
-    return "<html><H1>Welcome to the flask course</H1></html>"
+    # Returning HTML directly works, but templates are cleaner for real pages.
+    return "<h1>Welcome to the Flask course</h1>"
 
-@app.route("/index")
+
+@app.get("/index")
 def index():
-    return render_template('index.html')
+    return render_template(
+        "index.html",
+        page_title="Home",
+        message="This page came from a Jinja template.",
+    )
 
-@app.route('/about')
+
+@app.get("/about")
 def about():
-    return render_template('about.html')
+    return render_template("about.html", page_title="About")
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     app.run(debug=True)

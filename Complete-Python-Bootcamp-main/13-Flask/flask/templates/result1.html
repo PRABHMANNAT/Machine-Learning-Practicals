@@ -1,19 +1,11 @@
-<html>
-<h2>
-    Final Results
-</h2>
-<body>
-
-   
-     {% for key,value in results.items()   %}
-     
-      {# This is the comment section #}
-      <h1>{{ key }}<h1>
-      <h2>{{ value }}</h2>
-
-    
-     {% endfor %}
-
-    
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+  <h1>Final Results</h1>
+  <dl class="card">
+    {% for key, value in results.items() %}
+      {# Jinja comments do not appear in the browser's HTML. #}
+      <dt>{{ key|replace('_', ' ')|title }}</dt>
+      <dd>{{ value }}</dd>
+    {% endfor %}
+  </dl>
+{% endblock %}
