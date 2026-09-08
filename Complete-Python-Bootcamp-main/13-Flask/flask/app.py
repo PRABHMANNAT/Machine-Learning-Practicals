@@ -19,6 +19,7 @@ app = Flask(__name__)
 def welcome():
     """Return a tiny plain-text response for the home URL."""
     return "Welcome to this beginner-friendly Flask course!"
+    # return "<html><h1>Welcome to this beginner-friendly Flask course!</h1></html>"
 
 
 @app.get("/index")
