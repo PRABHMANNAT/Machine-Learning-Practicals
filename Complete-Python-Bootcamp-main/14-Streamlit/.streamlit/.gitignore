@@ -1,0 +1,5 @@
+# Real authentication and connection secrets must stay only on this computer.
+secrets.toml
+
+# Keep the safe teaching template in Git.
+!secrets.toml.example
